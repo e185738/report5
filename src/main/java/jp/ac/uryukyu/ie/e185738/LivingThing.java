@@ -6,6 +6,12 @@ public class LivingThing {
     private int attack;
     private boolean dead;
 
+    /**
+     * コンストラクタ。名前、最大HP、攻撃力を指定する。
+     * @param name 名前
+     * @param maximumHP 最大HP
+     * @param attack 攻撃力
+     */
     public LivingThing(String name, int maximumHP, int attack){
         this.name = name;
         hitPoint = maximumHP;
@@ -22,6 +28,10 @@ public class LivingThing {
         return name;
     }
 
+    /**
+     *敵に与えるダメージを設定するメソッド。
+     * @param opponent 敵の名前
+     */
     public void attack(LivingThing opponent){
         if (dead == false) {
             int damage = (int) (Math.random() * attack);
